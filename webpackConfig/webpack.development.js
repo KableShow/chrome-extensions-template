@@ -13,14 +13,14 @@ module.exports = merge(baseWebpackConfig, {
   devServer: {
     port: 8887,
     open: true,
-    openPage: 'itemMonitor'
+    openPage: 'popup'
   },
   plugins: [
     new webpack.DefinePlugin({
       'SERVICE_ENV': JSON.stringify('development')
     }),
     new HtmlWebpackPlugin({
-      filename: 'popup.html',
+      filename: 'popup',
       template: path.resolve(__dirname, '../popup/index.html'),
       inject: true,
       chunks: ['js/popupindex.bundle.js']
