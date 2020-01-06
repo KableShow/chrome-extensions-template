@@ -29,7 +29,6 @@
         "48": "images/smile.jpg",
         "128": "images/smile.jpg"
     },
-    "key": "test",
     "manifest_version": 2,
     "name": "{{pluginName}}-测试版",
     "permissions": [
