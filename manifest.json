@@ -9,10 +9,11 @@
     "content_scripts": [
         {
             "js": [
-                "js/content.bundle.js"
+                "js/contentindex.bundle.js"
             ],
             "matches": [
-                "*"
+              "http://*/*",
+              "https://*/*"
             ],
             "run_at": "document_idle"
         }
@@ -30,7 +31,7 @@
     },
     "key": "test",
     "manifest_version": 2,
-    "name": "gg-测试版",
+    "name": "{{pluginName}}-测试版",
     "permissions": [
         "declarativeContent",
         "storage",
