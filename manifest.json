@@ -30,7 +30,7 @@
     },
     "key": "test",
     "manifest_version": 2,
-    "name": "{{pluginName}}-测试版",
+    "name": "gg-测试版",
     "permissions": [
         "declarativeContent",
         "storage",

@@ -79,7 +79,7 @@ module.exports = merge(baseWebpackConfig, {
   optimization: {
     minimizer: [
       new ParallelUglifyPlugin({ // 多进程压缩
-        cacheDir: '.cache/',
+        cacheDir: './node_modules/.cache/',
         uglifyES: { // 这个项目不需要用babel转成es5
           output: {
             comments: false,
