@@ -24,7 +24,7 @@ module.exports = merge(baseWebpackConfig, {
       filename: 'popup',
       template: path.resolve(__dirname, '../popup/index.html'),
       inject: true,
-      chunks: ['js/popupindex.bundle.js']
+      chunks: ['js/popupindex']
     })
   ]
 })
