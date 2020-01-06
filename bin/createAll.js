@@ -45,11 +45,11 @@ async function main () {
   await addDateDesc()
   if (isProduction) {
     csvName = `${packageJson.pluginName}-v` + manifest.version + '-正式版.crx'
-    command = 'crx pack dist -p bm.pem -o ' + './lastBuild/' + csvName + ' && node ./bin/zipdist.js --production'
+    command = 'crx pack dist -p key/rsa_public_key.pem -o ' + './lastBuild/' + csvName + ' && node ./bin/zipdist.js --production'
   } else {
     let time = moment(currentTime).format('YYYYMMDDHHmm')
     csvName = `${packageJson.pluginName}-v` + manifest.version + '-' + time + '-测试版.crx'
-    command = 'crx pack dist -p bm.pem -o ' + './lastBuild/' + csvName + ' && node ./bin/zipdist.js --time=' + time
+    command = 'crx pack dist -p key/rsa_public_key.pem -o ' + './lastBuild/' + csvName + ' && node ./bin/zipdist.js --time=' + time
   }
   
   if (shell.exec(command).code !== 0) {
